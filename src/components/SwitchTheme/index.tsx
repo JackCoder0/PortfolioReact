@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ToggleSwitch } from "./styles";
 import { ToggleThemeType } from "../../layouts/DefaultLayout/types";
+// import { SunDim, Moon } from "lucide-react";
 
 interface SwitchThemeProps {
   toggleTheme: ToggleThemeType;
@@ -26,7 +27,9 @@ export function SwitchTheme({ toggleTheme }: SwitchThemeProps) {
   return (
     <ToggleSwitch>
       <input type="checkbox" checked={isToggled} onChange={onToggle} />
-      <span />
+      <span>
+        {/* {isToggled ? <Moon size={18} /> : <SunDim size={18} />} */}
+      </span>
     </ToggleSwitch>
   )
 }
