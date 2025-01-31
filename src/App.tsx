@@ -1,24 +1,34 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Router } from './Router';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components'
 import { darkTheme, lightTheme } from './styles/themes/default';
 import { GlobalStyle } from './styles/global';
 
-
 export function App() {
-  const [theme, setTheme] = useState('light');
+  const storedTheme = localStorage.getItem("themeMode");
+  const initialTheme = storedTheme ? storedTheme : "light";
+
+  const [theme, setTheme] = useState<string>(initialTheme);
+  const isDarkTheme = theme === "dark";
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    const newTheme = isDarkTheme ? "light" : "dark";
+    setTheme(newTheme);
+    localStorage.setItem("themeMode", newTheme);
   };
 
-  const currentTheme = theme === "light" ? lightTheme : darkTheme;
+  useEffect(() => {
+    const themeFromLocalStorage = localStorage.getItem("themeMode");
+    if (themeFromLocalStorage) {
+      setTheme(themeFromLocalStorage);
+    }
+  }, []);
 
   return (
-    <ThemeProvider theme={currentTheme}>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <BrowserRouter>
-      <Router toggleTheme={toggleTheme} />
+        <Router toggleTheme={toggleTheme} />
       </BrowserRouter>
 
       <GlobalStyle />
