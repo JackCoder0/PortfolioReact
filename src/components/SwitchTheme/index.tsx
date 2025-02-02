@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ToggleSwitch } from "./styles";
-import { ToggleThemeType } from "../../layouts/DefaultLayout/types";
+import { ToggleThemeType } from "../../@types/types";
 // import { SunDim, Moon } from "lucide-react";
 
 interface SwitchThemeProps {
