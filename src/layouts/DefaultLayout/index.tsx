@@ -8,8 +8,8 @@ export function DefaultLayout({ toggleTheme }: { toggleTheme: ToggleThemeType })
   return (
     <LayoutContainer>
       <Header toggleTheme={toggleTheme} />
-
       <Navbar />
+
       <Outlet />
     </LayoutContainer>
   );

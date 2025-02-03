@@ -17,7 +17,7 @@ export const lightTheme = {
   header: "#3781AE90",
   primary: "#519ac8",
   secondary: "#87bad9",
-  tertiary: "#464a4f",
+  tertiary: "#68707a",
   accent: "#2781b9",
   white: "#ffffff",
   black: "#000000",

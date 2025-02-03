@@ -1,4 +1,10 @@
-import { HomeContainer, SaluteContainer, Working, AvatarSection, Highlights } from "./styles";
+import {
+  HomeContainer,
+  SaluteContainer,
+  Working,
+  AvatarSection,
+  Highlights
+} from "./styles";
 import Avatar from "../../assets/avatar2d.svg"
 
 export function Home() {
@@ -31,24 +37,20 @@ export function Home() {
       <Highlights>
         <ul>
           <li>
-            <p>
-              Playlists para dar aquele gás no trabalho
-            </p>
+            <span>6</span>
+            <p>Playlists para dar aquele gás no trabalho</p>
           </li>
           <li>
-            <p>
-              Playlists para dar aquele gás no trabalho
-            </p>
+            <span>5</span>
+            <p>Cafés que não podem faltar no meu dia</p>
           </li>
           <li>
-            <p>
-              Playlists para dar aquele gás no trabalho
-            </p>
+            <span>4</span>
+            <p>Cursos para turbinar minhas skills</p>
           </li>
           <li>
-            <p>
-              Playlists para dar aquele gás no trabalho
-            </p>
+            <span>3</span>
+            <p>Jogos de história que me marcaram</p>
           </li>
         </ul>
       </Highlights>
