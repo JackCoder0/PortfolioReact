@@ -4,25 +4,25 @@ import { NavBarContent } from "./styles";
 export function Navbar() {
   return (
     <NavBarContent>
-      <a href="">
+      <a href="#">
         <LayoutGrid size={32} color="#ffffff" />
       </a>
-      <a href="">
+      <a href="#">
         <CircleUser size={32} color="#ffffff" />
       </a>
-      <a href="">
+      <a href="#">
         <GraduationCap size={32} color="#ffffff" />
       </a>
-      <a href="">
+      <a href="#">
         <Monitor size={32} color="#ffffff" />
       </a>
-      <a href="">
+      <a href="#">
         <CodeXml size={32} color="#ffffff" />
       </a>
-      <a href="">
+      <a href="#">
         <FileCode size={32} color="#ffffff" />
       </a>
-      <a href="">
+      <a href="#">
         <Mail size={32} color="#ffffff" />
       </a>
     </NavBarContent>
